@@ -1,3 +1,4 @@
+import Arrived from "../Arrived/Arrived";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Category></Category>
+            <Arrived></Arrived>
         </div>
     );
 };

@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Diamond Necklace",
+        "category": "Necklaces",
+        "price": 1200.00,
+        "rating": 4.8,
+        "image": "diamond_necklace.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Gold Earrings",
+        "category": "Earrings",
+        "price": 350.00,
+        "rating": 4.5,
+        "image": "gold_earrings.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Silver Bracelet",
+        "category": "Bracelets",
+        "price": 99.99,
+        "rating": 4.2,
+        "image": "silver_bracelet.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Pearl Ring",
+        "category": "Rings",
+        "price": 250.00,
+        "rating": 4.7,
+        "image": "pearl_ring.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Sapphire Brooch",
+        "category": "Brooches",
+        "price": 500.00,
+        "rating": 4.9,
+        "image": "sapphire_brooch.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Emerald Pendant",
+        "category": "Pendants",
+        "price": 450.00,
+        "rating": 4.6,
+        "image": "emerald_pendant.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Ruby Bracelet",
+        "category": "Bracelets",
+        "price": 275.00,
+        "rating": 4.4,
+        "image": "ruby_bracelet.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Platinum Wedding Ring",
+        "category": "Rings",
+        "price": 950.00,
+        "rating": 4.9,
+        "image": "platinum_wedding_ring.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Amethyst Earrings",
+        "category": "Earrings",
+        "price": 150.00,
+        "rating": 4.3,
+        "image": "amethyst_earrings.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Pearl Necklace",
+        "category": "Necklaces",
+        "price": 300.00,
+        "rating": 4.7,
+        "image": "pearl_necklace.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Sapphire Stud Earrings",
+        "category": "Earrings",
+        "price": 420.00,
+        "rating": 4.6,
+        "image": "sapphire_stud_earrings.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Diamond Engagement Ring",
+        "category": "Rings",
+        "price": 2200.00,
+        "rating": 4.9,
+        "image": "diamond_engagement_ring.jpg"
+      },
+      {
+        "id": 13,
+        "name": "Opal Brooch",
+        "category": "Brooches",
+        "price": 180.00,
+        "rating": 4.5,
+        "image": "opal_brooch.jpg"
+      },
+      {
+        "id": 14,
+        "name": "White Gold Necklace",
+        "category": "Necklaces",
+        "price": 550.00,
+        "rating": 4.7,
+        "image": "white_gold_necklace.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Topaz Bracelet",
+        "category": "Bracelets",
+        "price": 320.00,
+        "rating": 4.4,
+        "image": "topaz_bracelet.jpg"
+      }
+  ]

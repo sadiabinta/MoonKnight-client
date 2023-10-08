@@ -15,7 +15,7 @@ const Banner = () => {
                     <img src={img4} />
                 </div>
                 <div>
-                    <img src={img2} />
+                    <img  src={img2} />
                 </div>
                 <div>
                     <img src={img3} />

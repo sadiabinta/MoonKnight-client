@@ -9,8 +9,16 @@ import earring3 from "../../../assets/home/earring3.jpg";
 import earring4 from "../../../assets/home/earring4.jpg";
 import earring5 from "../../../assets/home/earring5.jpg";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Category = () => {
+  const[jewelry,setJewelry]=useState([]);
+  useEffect(()=>{
+    fetch('jewelry.json')
+    .then(res=>res.json())
+    .then(data=>setJewelry(data))
+  },[])
   return (
     <section>
       <SectionTitle
@@ -26,21 +34,22 @@ const Category = () => {
       modules={[Pagination]}
       className="mySwipe mb-24"
     >
-      <SwiperSlide>
+      {jewelry.map(item=><SwiperSlide>
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
           <figure>
             <img src={earring1} alt="Shoes" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title">{item.name}</h2>
+            <p>${item.price}</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
-      </SwiperSlide>
-      <SwiperSlide>
+      </SwiperSlide>)}
+      
+      {/* <SwiperSlide>
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
           <figure>
             <img src={earring2} alt="Shoes" />
@@ -95,7 +104,7 @@ const Category = () => {
             </div>
           </div>
         </div>
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
     </section>
   );
