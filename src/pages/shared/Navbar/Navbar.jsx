@@ -1,15 +1,16 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { FaShoppingCart} from 'react-icons/fa';
 
 const Navbar = () => {
-  const {user,logOut}=useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
-  const handleLogout=()=>{
+  const handleLogout = () => {
     logOut()
-    .then(()=>{})
-    .catch(error=>console.log(error));
-  }
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navOptions = (
     <>
       <li>
@@ -27,8 +28,14 @@ const Navbar = () => {
       <li>
         <Link to="/blogs">Blogs</Link>
       </li>
-      
-      
+      <li>
+        <Link to="/">
+          <button className="btn">
+            <FaShoppingCart></FaShoppingCart>
+            <div className="badge badge-secondary">+0</div>
+          </button>
+        </Link>
+      </li>
     </>
   );
   return (
@@ -65,15 +72,21 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-        {
-        user ? <>
-        <span>{user.displayName}</span>
-        <button onClick={handleLogout} className="btn btn-ghost">Logout</button>
-        </>: <>
-        <button  className="btn btn-ghost"><Link to="/login">Login</Link></button>
-        {/* <Link to="/login">Login</Link> */}
-        </>
-      }
+          {user ? (
+            <>
+              <span>{user.displayName}</span>
+              <button onClick={handleLogout} className="btn btn-ghost">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <button className="btn btn-ghost">
+                <Link to="/login">Login</Link>
+              </button>
+              {/* <Link to="/login">Login</Link> */}
+            </>
+          )}
         </div>
       </div>
     </>

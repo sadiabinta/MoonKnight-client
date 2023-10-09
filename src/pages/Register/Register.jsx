@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from "sweetalert2";
+import SocialLogin from '../shared/SocialLogin/SocialLogin';
 
 const Register = () => {
     const { register,reset, formState: { errors }, handleSubmit } = useForm();
@@ -112,7 +113,7 @@ const Register = () => {
                 </div>
                 <div className="form-control items-center">
                     <input type="submit" className="btn bg-orange-950 my-10 text-white" value='Register Now' />
-                    {/* <SocialLogin></SocialLogin> */}
+                    <SocialLogin></SocialLogin>
                 </div>
                 <p className="text-center">Already Registered? <Link className="text-orange-600" to='/login'>Login</Link></p>
             </form>

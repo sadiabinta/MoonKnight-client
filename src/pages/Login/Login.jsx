@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Swal from "sweetalert2";
+import SocialLogin from '../shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -63,7 +64,7 @@ const Login = () => {
                 </div>
                 <div className="form-control items-center">
                     <input type="submit" className="btn bg-orange-950 my-10 w-1/3 text-white" value='Login' />
-                    {/* <SocialLogin></SocialLogin> */}
+                    <SocialLogin></SocialLogin>
                 </div>
                 <p className="text-center">Not Registered? <Link className="text-orange-600" to='/register'>Create An Account</Link></p>
             </form>
