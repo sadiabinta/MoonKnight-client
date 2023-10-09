@@ -13,14 +13,10 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import '@smastrom/react-rating/style.css'
+import useJewelry from "../../../hooks/useJewelry";
 
 const Category = () => {
-  const [jewelry, setJewelry] = useState([]);
-  useEffect(() => {
-    fetch("jewelry.json")
-      .then((res) => res.json())
-      .then((data) => setJewelry(data));
-  }, []);
+  const [jewelry,loading] = useJewelry();
   return (
     <section>
       <SectionTitle heading={"DEAL OF THE DAY"}></SectionTitle>
@@ -38,7 +34,7 @@ const Category = () => {
           <SwiperSlide>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
-                <img src={earring1} alt="Shoes" />
+                <img src={item.image} alt="Shoes" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{item.name}</h2>
